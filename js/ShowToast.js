@@ -63,15 +63,6 @@ function showToast({
     toastID.appendChild(divToast);
   }
 }
-
-showToast({
-  title: "Success",
-  message: "Anyone with acssess is allowed to seeeeeeeeeeeee this message",
-  type: "error",
-  duration: 3,
-  delay: 3,
-});
-
 // Tạo keyframes bằng Javascript 
 function createKeyframes(name1, name2) {
     const styleSheet = document.styleSheets[0]; // Chọn stylesheet (thay đổi số 0 nếu cần)
