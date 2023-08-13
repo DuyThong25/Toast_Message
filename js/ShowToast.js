@@ -65,7 +65,9 @@ function showToast({
 }
 // Tạo keyframes bằng Javascript 
 function createKeyframes(name1, name2) {
-    const styleSheet = document.styleSheets[0]; // Chọn stylesheet (thay đổi số 0 nếu cần)
+    const myStyleSheet = document.getElementById("mystyle");
+    const styleSheet = myStyleSheet.sheet; // Lấy đối tượng stylesheet
+
     const keyframesRule1 = `
     @keyframes ${name1} {
         from {
