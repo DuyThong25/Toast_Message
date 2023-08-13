@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/mystyle.css" />
+    <!-- link icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Đặt tên thep BEM ---- success -->
+    <div id="toast">
+      <!-- <div class="toast toast--success">
+        <div class="toast__icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="toast__body">
+          <h3 class="toast__title">success</h3>
+          <p class="toast__msg">
+            Anyone with acssess is allowed to seeeeeeeeeeeee this message
+          </p>
+        </div>
+        <div class="toast__close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div> -->
+    </div>
+
+    <div>
+      <div onclick="showSuccessMessage()" class="btn btn--success">Show Success message</div>
+      <div onclick="showErrorMessage()" class="btn btn--error">Show Error message</div>
+    </div>
+
+    <script src="js/ShowToast.js"></script>
+    <script>
+      function showSuccessMessage() {
+        showToast({
+          title: 'Thành công!',
+          message: 'Bạn đã thành công!',
+          type: 'success',
+          duration: 3,
+          delay: 3
+        })
+      }
+      function showErrorMessage() {
+        showToast({
+          title: 'Thất bại!',
+          message: 'Không thể chạy thành công, mời bạn liên hệ với quản trị viên',
+          type: 'error',
+          duration: 1,
+          delay: 2
+        })
+      }
+    </script>
+    
+  </body>
+
+</html>
